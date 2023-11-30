@@ -1,0 +1,271 @@
+
+/*mode ningth*/
+.textNingthMode{
+	color: white;
+}
+.containerModeNigth{
+   background-color: white;
+}
+body{
+	font-family: 'Barlow', sans-serif;
+	background-color: #1c1c1c ;
+   overflow: hidden;
+}
+/*section welcom*/
+#welcomeSection{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	padding: 10px;
+   transition: 0.6s;
+}
+#textWelcome{      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      overflow: hidden; /* Para que el cursor no se vea fuera del cuadro del texto */
+      border-right: 2px solid #000; /* Línea que simula el cursor de escritura */
+      white-space: nowrap; /* Para que el texto no se divida en varias líneas */
+      margin: 0;
+      animation: escribiendo 1s steps(40, end);
+      border-right:solid 4px transparent;
+  }
+   @keyframes escribiendo {
+      from { width: 0;  border-right: solid 4px white;} /* Ancho inicial, texto invisible */
+      to { width: 100%;  border-right: solid 4px white;} /* Ancho final, texto completamente visible */
+    }
+/*nav pc*/
+#navPc{
+   position:sticky;
+   top: 0;
+      z-index:100000;
+   height: auto;
+   width: 100%;
+   padding: 1px;
+   margin: 0;
+
+}
+#navPc img{
+   width: 40px;
+
+} 
+#initSection{
+   overflow: auto;
+   overflow-x: hidden;
+   scrollbar-width: thin;
+   transition: 0.6s;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   width: 100%;
+   height: 100vh;
+}
+#promptsForNavPc{
+   margin-left: 10%;
+   display: inline-block;
+}
+#promptsForNavPc a {
+   margin: 10px;
+   text-decoration: none;
+   color: black;
+}
+.selectsFonavs{
+   text-align: center;
+   background-color: transparent;
+   border: none;
+   margin: 10px;
+}
+#homeInlutrationImg{
+
+}
+#homeInlutration{
+z-index: 50;
+top: 0;
+position: relative;
+background-image: url('../media/inlustraciones/arena-esports-borregos-monterrey.jpg');
+background-size: cover;
+background-repeat:no-repeat ;
+height: 100%;
+/*border: solid 2px blue;*/
+}
+.sobrePonerHomeInlutration{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   z-index: 100;
+   width: 100%;
+   height: 100%;
+   transform: translate(-50%,-50%);
+   background-color: rgba(30,30, 30, 0.7);
+}
+.selectsFonavs option{
+   background-color: transparent;
+   border: none;
+}#homeInlutrationImg{
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+.textOFinlutration{
+   z-index: 3000;
+   width: 80%;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   color: white;
+}
+#innerText{
+   padding: 10px;
+   border-radius: 5px;
+   float: left;
+   width: 50%;
+   backdrop-filter: blur(25px);
+}
+#buttonClick{
+   padding: 5px;
+   border: none;
+   border-radius: 15px 15px 15px 0px;
+   margin: 4px;
+   cursor: pointer;
+}
+#consolasSection{
+   position: relative;
+   height: 100vh;
+   background: white;
+   padding:10px;
+}
+/*console section*/
+.elementsFather{
+              display: flex;
+
+        transition: 0.6s;
+/*       white-space: nowrap;*/
+            overflow-x: hidden; /* Cambiado a hidden para ocultar la barra de desplazamiento nativa */
+            position: relative;
+               justify-content: center;  align-items: center;
+   width: 80%;
+   height: 60%;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   border-radius: 5px;
+   transform: translate(-50%,-50%);
+   padding: 20px;
+/*   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
+   overflow: hidden;
+   z-index: 400;
+}
+.containerConsole{
+   transition: 0.6s;
+      flex: 0 0 auto;
+/*        line-height: 150px;*/
+   display: inline-block;
+   width: 80%;
+   height: 90%;
+/*   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
+   backdrop-filter: blur(10px);
+
+/*      text-align: center;*/
+/*            line-height: 150px;*/
+             margin: 5px; /* Añadido un margen para separar los elementos */
+}
+.containerScrollConsolas{
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   z-index: 500;
+}
+#buttonMoveScrllooX{
+   position: absolute;
+   top: 50%;
+   left: 5%;
+   transform: translate(-1%,-5%);
+   border: none;
+   background-color: transparent;
+   color: black;
+   border-radius: 5px;
+   height: auto;
+}
+#buttonMoveScrlloo_X{
+  position: absolute;
+   right: 5%;
+   top: 50%;
+      transform: translate(1%,-5%);
+   border: none;
+   background-color: transparent;
+   color: black;
+   border-radius: 5px;
+   height: auto;
+}
+.buttonscroll{
+   background-color: white;
+   padding: 5px;
+   border-radius: 5px;
+   color: black;
+   cursor: pointer;
+}
+.containerScrollConsolas img{
+   width: auto;
+   height: 50%;
+   display: inline-block;
+   float: left;
+   position: absolute;
+   left: 6%;
+   top: 50%;
+   transform: translate(-6%,-50%);
+   transition: 0.6s;
+}
+.containerTxtConsoles{
+     position: absolute;
+   right: 1%;
+   top: 20%;
+   transform: translate(1%,-20%);
+   text-align: left;
+   width: 50%;
+   height: 10%;
+   background-color: transparent;
+   position: relative;
+   color:white;
+   float: right;
+   display: inline-block;
+   transition: 0.6s;
+}
+.containerTxtConsoles p{
+   font-size: 20px;
+}
+#gifConsole{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 100%;
+   height: 100%;
+   transform: translate(-50%,-50%);
+}
+.sobrePonerGifConsole{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 100%;
+   height: 100%;
+   transform: translate(-50%,-50%);
+   background-color: rgba(30, 30,30, 0.7);
+   padding: 10px;
+   z-index: 300;
+}
+.promptsButtonScroll{
+   z-index: 600;
+}
+.animationImgClass{
+      animation:initAnimationL1 1s ;
+}
+@keyframes initAnimationL1{
+  from {
+    transform: translate(-100%,-50%);
+  }
+  to {
+    transform: translateX(0,-50%);
+  }
+}
