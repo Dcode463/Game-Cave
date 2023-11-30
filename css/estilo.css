@@ -269,3 +269,8 @@ height: 100%;
     transform: translateX(0,-50%);
   }
 }
+@media only screen and (max-width : 750px){
+   #navPc {
+      display: none;
+   }
+}

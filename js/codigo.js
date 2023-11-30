@@ -82,7 +82,6 @@ return whatObject()
 }
 }}
 function animationAutomaticScroll(){
-	console.log('Init')
 const init_Recursividad = object =>{
 let consoleObject = configObjVideoConsole[object];
 objD.gifElement.src = consoleObject.gifUrl;
@@ -97,9 +96,7 @@ objD.containerTxtConsoles.style.right = '1%'
 const iniClearactualSection = () => {
 objD.imgPng.style.left = '-50%';
 objD.containerTxtConsoles.style.right = '-70%'
-setTimeout(()=> {
-init_Recursividad(whatObject())	
-},1000)
+setTimeout(()=>{init_Recursividad(whatObject())},1000)
 }
 iniClearactualSection()
 }
@@ -108,4 +105,4 @@ iniClearactualSection()
 
 animationAutomaticScroll() // start animation console animation
 
-setInterval(()=> {animationAutomaticScroll()},10000) // inicio automatico de console animation
+const initAutomaticScroll = setInterval(()=> {animationAutomaticScroll()},10000) // inicio automatico de console animation
