@@ -15,17 +15,17 @@ animationImgClass : document.querySelector('.animationImgClass'),
 containerTxtConsoles : document.querySelector('.containerTxtConsoles')
 }
 
-window.addEventListener('load',()=> {
-objD.sectionWelcome.style.opacity = '0';
-objD.sectionInit.style.opacity = '0';
-setTimeout(()=>{objD.sectionWelcome.style.display = 'none'; inti()},1000)
-})
+// window.addEventListener('load',()=> {
+// objD.sectionWelcome.style.opacity = '0';
+// objD.sectionInit.style.opacity = '0';
+// setTimeout(()=>{objD.sectionWelcome.style.display = 'none'; inti()},1000)
+// })
 
 
-function inti () {
-	objD.sectionInit.style.display = 'block'
-setTimeout(()=>{objD.sectionInit.style.opacity = '1';},500)
-}
+// function inti () {
+// 	objD.sectionInit.style.display = 'block'
+// setTimeout(()=>{objD.sectionInit.style.opacity = '1';},500)
+// }
 
 // scroll console
 // config
