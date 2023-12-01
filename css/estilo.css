@@ -11,6 +11,11 @@ body{
 	background-color: #1c1c1c ;
    overflow: hidden;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /*section welcom*/
 #welcomeSection{
 	position: absolute;
@@ -38,7 +43,7 @@ body{
    position:sticky;
    top: 0;
       z-index:100000;
-   height: auto;
+   height: 12%;
    width: 100%;
    padding: 1px;
    margin: 0;
@@ -63,6 +68,7 @@ body{
 }
 #promptsForNavPc{
    margin-left: 10%;
+   margin-bottom: 12%;
    display: inline-block;
 }
 #promptsForNavPc a {
@@ -272,19 +278,25 @@ height: 100%;
 }
 /*Nav responsive*/
 #navReponsiveMovil{
-   position: sticky;
-   top: auto;
- width: 100%;
- height: 5%;
+   position:relative;
+    height:auto;
  background-color: white;
  padding: 10px;
+ z-index: 1000;
+
 }
 .imgNavRespoviMovil{
-   position: absolute;
-   left: 50%;
-   top: 50%;
-  transform: translate(-50%,-50%);
-  width: 5%;
+  width: 10%;
+  height: auto;
+}
+#menuBarsResponsive{
+ position: absolute;
+ right: 5%;
+ top: 50%;
+ scale: 120%;
+ font-size: 20px;
+ transform: translate(5%,-50%);
+
 }
 @media only screen and (max-width : 750px){
 /*navs*/
@@ -294,4 +306,105 @@ height: 100%;
    #navReponsiveMovil{
       display: block;
    }
+/*section conosle*/
+
+#consolasSection{
+   position: relative;
+   height: 100vh;
+   background: white;
+   padding:10px;
+}
+/*console section*/
+.elementsFather{
+              display: flex;
+
+        transition: 0.6s;
+/*       white-space: nowrap;*/
+            overflow-x: hidden; /* Cambiado a hidden para ocultar la barra de desplazamiento nativa */
+            position: relative;
+               justify-content: center;  align-items: center;
+   width: 100%;
+   height: 70%;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   border-radius: 5px;
+   transform: translate(-50%,-50%);
+   padding: 20px;
+/*   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
+   overflow: hidden;
+   z-index: 400;
+}
+.containerConsole{
+   transition: 0.6s;
+      flex: 0 0 auto;
+/*        line-height: 150px;*/
+   display: inline-block;
+   width: 100%;
+   height: 70%;
+/*   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
+   backdrop-filter: blur(5px);
+
+/*      text-align: center;*/
+/*            line-height: 150px;*/
+             margin: 5px; /* Añadido un margen para separar los elementos */
+}
+.containerScrollConsolas{
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   z-index: 500;
+}
+
+.containerScrollConsolas img{
+   width: 50%;
+   height: 50%;
+   object-fit: contain;
+   display: inline-block;
+   float: left;
+   position: absolute;
+   left: 6%;
+   top: 10%;
+   transform: translate(-6%,-10%);
+   transition: 0.6s;
+}
+.containerTxtConsoles{
+     position: absolute;
+   right: 1%;
+   top: 60%;
+   transform: translate(1%,-60%);
+   text-align: left;
+   width: 80%;
+   height: 10%;
+   background-color: transparent;
+   position: relative;
+   color:white;
+   float: right;
+   display: inline-block;
+   transition: 0.6s;
+}
+.containerTxtConsoles p{
+   font-size: 20px;
+}
+#gifConsole{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 90%;
+   height: 90%;
+   transform: translate(-50%,-50%);
+}
+.sobrePonerGifConsole{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 100%;
+   height: 100%;
+   transform: translate(-50%,-50%);
+   background-color: rgba(30, 30,30, 0.7);
+   padding: 10px;
+   z-index: 300;
+}
 }

@@ -94,8 +94,8 @@ objD.containerTxtConsoles.style.right = '1%'
 },1000)
 }
 const iniClearactualSection = () => {
-objD.imgPng.style.left = '-50%';
-objD.containerTxtConsoles.style.right = '-70%'
+objD.imgPng.style.left = '-100%';
+objD.containerTxtConsoles.style.right = '-100%'
 setTimeout(()=>{init_Recursividad(whatObject())},1000)
 }
 iniClearactualSection()
