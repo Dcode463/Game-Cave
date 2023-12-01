@@ -86,11 +86,13 @@ body{
 
 }
 #homeInlutration{
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
 z-index: 50;
-top: 0;
 position: relative;
-background-image: url('../media/inlustraciones/arena-esports-borregos-monterrey.jpg');
-background-size: cover;
+background-image: linear-gradient(to right top, #2100ff, #161eff, #0b2eff, #0239ff, #0043ff, #3543fd, #4c43fa, #5c44f8, #793bf2, #9030eb, #a420e4, #b500dc);background-size: cover;
 background-repeat:no-repeat ;
 height: 100%;
 /*border: solid 2px blue;*/
@@ -137,9 +139,14 @@ height: 100%;
    cursor: pointer;
 }
 #consolasSection{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
    position: relative;
    height: 100vh;
-   background: white;
+ background-image: linear-gradient(to right top, #4d0187, #4f1e9d, #4d31b4, #4843ca, #3e55e1, #6c50df, #8d4bdb, #a944d5, #d110a9, #e2007a, #e2004b, #d41d1d);
+
    padding:10px;
 }
 /*console section*/
@@ -309,18 +316,21 @@ height: 100%;
 /*section conosle*/
 
 #consolasSection{
+   width: 95%;
+   
    position: relative;
    height: 100vh;
-   background: white;
    padding:10px;
+border-radius: 0 0 20px 20px;
+
 }
-/*console section*/
+
 .elementsFather{
               display: flex;
 
         transition: 0.6s;
-/*       white-space: nowrap;*/
-            overflow-x: hidden; /* Cambiado a hidden para ocultar la barra de desplazamiento nativa */
+
+            overflow-x: hidden; 
             position: relative;
                justify-content: center;  align-items: center;
    width: 100%;
@@ -331,23 +341,21 @@ height: 100%;
    border-radius: 5px;
    transform: translate(-50%,-50%);
    padding: 20px;
-/*   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
+
    overflow: hidden;
    z-index: 400;
 }
 .containerConsole{
    transition: 0.6s;
       flex: 0 0 auto;
-/*        line-height: 150px;*/
+
    display: inline-block;
    width: 100%;
    height: 70%;
-/*   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
+
    backdrop-filter: blur(5px);
 
-/*      text-align: center;*/
-/*            line-height: 150px;*/
-             margin: 5px; /* Añadido un margen para separar los elementos */
+             margin: 5px; 
 }
 .containerScrollConsolas{
    overflow: hidden;
@@ -406,5 +414,12 @@ height: 100%;
    background-color: rgba(30, 30,30, 0.7);
    padding: 10px;
    z-index: 300;
+}
+#homeInlutration{
+width: 95%;
+}
+#homeInlutration{
+border-radius: 20px 20px 0 0;
+
 }
 }
