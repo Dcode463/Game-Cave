@@ -16,17 +16,17 @@ animationImgClass : document.querySelector('.animationImgClass'),
 containerTxtConsoles : document.querySelector('.containerTxtConsoles')
 }
 
-window.addEventListener('load',()=> {
-objD.sectionWelcome.style.opacity = '0';
-objD.sectionInit.style.opacity = '0';
-setTimeout(()=>{objD.sectionWelcome.style.display = 'none'; inti()},1000)
-})
+// window.addEventListener('load',()=> {
+// objD.sectionWelcome.style.opacity = '0';
+// objD.sectionInit.style.opacity = '0';
+// setTimeout(()=>{objD.sectionWelcome.style.display = 'none'; inti()},1000)
+// })
 
 
-function inti () {
-	objD.sectionInit.style.display = 'block';
-setTimeout(()=>{objD.sectionInit.style.opacity = '1';objD.navReponsiveMovil.style.opacity = '1';},500)
-}
+// function inti () {
+// 	objD.sectionInit.style.display = 'block';
+// setTimeout(()=>{objD.sectionInit.style.opacity = '1';objD.navReponsiveMovil.style.opacity = '1';},500)
+// }
 
 // scroll console
 // config
@@ -63,7 +63,7 @@ pTextInfo : `La Xbox Series S es la joya compacta que redefine la experiencia de
  Con un diseño elegante y potencia extraordinaria, este sistema ofrece un rendimiento impresionante en un formato más pequeño.`}
 }
 let validor = false;
-let matrizUtilizado = []
+let matrizUtilizado = [];
 let objectMatriz = ['configVideoXboox','configVideoPs4','configVideoPs5','configVideoXbooxS']
 
 const whatObject = () => {
