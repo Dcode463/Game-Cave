@@ -25,7 +25,6 @@ setTimeout(()=>{objD.sectionWelcome.style.display = 'none'; inti()},1000)
 
 function inti () {
 	objD.sectionInit.style.display = 'block';
-objD.navReponsiveMovil.style.display = 'block';
 setTimeout(()=>{objD.sectionInit.style.opacity = '1';objD.navReponsiveMovil.style.opacity = '1';},500)
 }
 

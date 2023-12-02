@@ -306,7 +306,9 @@ height: 100%;
  transform: translate(5%,-50%);
 
 }
+.separacionOfResponsive{ display:none; }
 @media only screen and (max-width : 750px){
+.separacionOfResponsive{ display:block }
 /*navs*/
    #navPc {
       display: none;
