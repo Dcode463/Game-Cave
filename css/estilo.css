@@ -170,17 +170,20 @@ height: 100%;
    transform: translate(-50%,-50%);
 }
 #imgFirstInlutration{
+   transition: 0.8s;
    width: 50%;
    position: absolute;
-   left: -20%;
+   left: 50%;
    top: 50%;
-   transform: translate(-10%,-50%);
+   transform: translate(-50%,-50%);
+   
 }
 #videoInlutrationGames{
    height: 100%;
    width: 100%;
    border-radius: 20px;
    border: solid 3px white;
+   object-fit: cover;
 }
 /*console section*/
 .elementsFather{

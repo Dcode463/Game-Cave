@@ -13,7 +13,10 @@ nameConsole : document.getElementById('nameConsole'),
 textInfoConsolesSection : document.getElementById('textInfoConsolesSection'),
 imgPng : document.getElementById('imgPng'),
 animationImgClass : document.querySelector('.animationImgClass'),
-containerTxtConsoles : document.querySelector('.containerTxtConsoles')
+containerTxtConsoles : document.querySelector('.containerTxtConsoles'),
+// video animation (games)
+videoInlutrationGames : document.getElementById('videoInlutrationGames'),
+imgFirstInlutration : document.getElementById('imgFirstInlutration')
 }
 
 // window.addEventListener('load',()=> {
@@ -105,5 +108,54 @@ iniClearactualSection()
 // Events 
 
 animationAutomaticScroll() // start animation console animation
+const objVideoAnimationGames = {
+	godOfWars : {
+		videoUrl : 'media/games/godOfWar/video.mp4',
+		imagePng : 'media/games/godOfWar/portada.png'
+	},
+	daysGone : {
+		videoUrl : 'media/games/DaysGone/video.mp4',
+		imagePng : 'media/games/DaysGone/portada.png'
+	},
+	warzone2 : {
+		videoUrl : 'media/games/warzone2/video.mp4',
+		imagePng : 'media/games/warzone2/portada.png'
+	},
+	fifa23 : {
+		videoUrl : 'media/games/fifa23/video.mp4',
+		imagePng : 'media/games/fifa23/portada.png'
+	}
+}
+	let arrayConstAnimationMatriz = [];
+	const arrayAnimationMatriz = Object.keys(objVideoAnimationGames);
+	let validorTwo = false;
+	const whatObjectAnimation = () => { 
+     for(let j = 0; j < arrayAnimationMatriz.length; j++){
+let verificatorIgualdad = arrayConstAnimationMatriz.some(i => i === arrayAnimationMatriz[j])
+if(verificatorIgualdad && arrayAnimationMatriz[j] === objD.videoInlutrationGames.getAttribute('src')) {validorTwo = true; continue}
+else if(verificatorIgualdad != true && validorTwo != true && arrayAnimationMatriz.length != arrayConstAnimationMatriz.length) {arrayConstAnimationMatriz.push(arrayAnimationMatriz[j]);return arrayAnimationMatriz[j]}
+else if(arrayAnimationMatriz.length === arrayConstAnimationMatriz.length){arrayConstAnimationMatriz = []; return whatObjectAnimation()}
+     }
+	}
+const funcionInitAnimationGames = () => {
+	console.log('Iniciando VideoGame')
+	const videoLoad = objD.videoInlutrationGames
+	const initAnimationGames = () => {
+		objD.imgFirstInlutration.style.left = '-2%';
+		videoLoad.removeEventListener('loadeddata', initAnimationGames)
+	}
 
-const initAutomaticScroll = setInterval(()=> {animationAutomaticScroll()},10000) // inicio automatico de console animation
+	const initPushAnimationInlutrationGames = async () =>{
+		videoLoad.removeEventListener('ended', initPushAnimationInlutrationGames);
+		objD.imgFirstInlutration.style.left = '50%';
+		let objectoSelecionado = await whatObjectAnimation()
+		videoLoad.src = objVideoAnimationGames[objectoSelecionado].videoUrl;
+		objD.imgFirstInlutration.src = objVideoAnimationGames[objectoSelecionado].imagePng;
+       funcionInitAnimationGames()
+	}
+	videoLoad.addEventListener('loadeddata', initAnimationGames)
+	videoLoad.addEventListener('ended', initPushAnimationInlutrationGames)
+}
+
+// const initAutomaticScroll = setInterval(()=> {animationAutomaticScroll()},10000) // inicio automatico de console animation
+funcionInitAnimationGames()
