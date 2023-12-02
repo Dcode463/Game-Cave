@@ -19,17 +19,17 @@ videoInlutrationGames : document.getElementById('videoInlutrationGames'),
 imgFirstInlutration : document.getElementById('imgFirstInlutration')
 }
 
-// window.addEventListener('load',()=> {
-// objD.sectionWelcome.style.opacity = '0';
-// objD.sectionInit.style.opacity = '0';
-// setTimeout(()=>{objD.sectionWelcome.style.display = 'none'; inti()},1000)
-// })
+window.addEventListener('load',()=> {
+objD.sectionWelcome.style.opacity = '0';
+objD.sectionInit.style.opacity = '0';
+setTimeout(()=>{objD.sectionWelcome.style.display = 'none'; inti()},1000)
+})
 
 
-// function inti () {
-// 	objD.sectionInit.style.display = 'block';
-// setTimeout(()=>{objD.sectionInit.style.opacity = '1';objD.navReponsiveMovil.style.opacity = '1';},500)
-// }
+function inti () {
+	objD.sectionInit.style.display = 'block';
+setTimeout(()=>{objD.sectionInit.style.opacity = '1';objD.navReponsiveMovil.style.opacity = '1';},500)
+}
 
 // scroll console
 // config
@@ -142,6 +142,8 @@ const funcionInitAnimationGames = () => {
 	const videoLoad = objD.videoInlutrationGames
 	const initAnimationGames = () => {
 		objD.imgFirstInlutration.style.left = '-2%';
+	videoLoad.play()
+
 		videoLoad.removeEventListener('loadeddata', initAnimationGames)
 	}
 
@@ -154,8 +156,8 @@ const funcionInitAnimationGames = () => {
        funcionInitAnimationGames()
 	}
 	videoLoad.addEventListener('loadeddata', initAnimationGames)
-	videoLoad.addEventListener('ended', initPushAnimationInlutrationGames)
+	setTimeout(initPushAnimationInlutrationGames,10000)
 }
 
-// const initAutomaticScroll = setInterval(()=> {animationAutomaticScroll()},10000) // inicio automatico de console animation
+const initAutomaticScroll = setInterval(()=> {animationAutomaticScroll()},10000) // inicio automatico de console animation
 funcionInitAnimationGames()

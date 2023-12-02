@@ -344,6 +344,42 @@ height: 100%;
 }
 .separacionOfResponsive{ display:none; }
 @media only screen and (max-width : 750px){
+   /*first Inlutration*/
+.inlutrationGames{
+   padding: 20px;
+   width: 80%;
+   height: 20%;
+   background-color: transparent;
+   position: absolute;
+   right: 0%;
+   top: 80%;
+   border-radius: 20px;
+   transform: translate(0%,-80%);
+   z-index: 3000;
+}
+.cajaSobrePonerInlutration{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 100%;
+   transform: translate(-50%,-50%);
+}
+#imgFirstInlutration{
+   transition: 0.8s;
+   width: 50%;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   
+}
+#videoInlutrationGames{
+   height: 100%;
+   width: 100%;
+   border-radius: 20px;
+   border: solid 3px white;
+   object-fit: cover;
+}
 .separacionOfResponsive{ display:block }
 /*navs*/
    #navPc {
@@ -465,8 +501,8 @@ border-radius: 20px 20px 0 0;
    width: 90%;
    position: absolute;
    left: 50%;
-   top: 50%;
-   transform: translate(-50%,-50%);
+   top: 30%;
+   transform: translate(-50%,-30%);
    color: white;
 }
 .textOFinlutration button{
