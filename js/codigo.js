@@ -150,6 +150,7 @@ const funcionInitAnimationGames = () => {
 
 	const initPushAnimationInlutrationGames = async () =>{
 		videoLoad.removeEventListener('ended', initPushAnimationInlutrationGames);
+	    objD.nextVideoGame.removeEventListener('click',call);
 		objD.imgFirstInlutration.style.left = '50%';
 		let objectoSelecionado = await whatObjectAnimation()
 		videoLoad.src = objVideoAnimationGames[objectoSelecionado].videoUrl;
