@@ -17,7 +17,9 @@ containerTxtConsoles : document.querySelector('.containerTxtConsoles'),
 // video animation (games)
 videoInlutrationGames : document.getElementById('videoInlutrationGames'),
 imgFirstInlutration : document.getElementById('imgFirstInlutration'),
-nextVideoGame : document.getElementById('nextVideoGame')
+nextVideoGame : document.getElementById('nextVideoGame'),
+// event observador
+sobrePonerGifConsole : document.querySelector('.sobrePonerGifConsole')
 }
 
 // window.addEventListener('load',()=> {
@@ -166,5 +168,12 @@ const funcionInitAnimationGames = () => {
 	objD.nextVideoGame.addEventListener('click',call)
 }
 
-// const initAutomaticScroll = setInterval(()=> {animationAutomaticScroll()},10000) // inicio automatico de console animation
+const initAutomaticScroll = setInterval(()=> {
+const observer = new IntersectionObserver((entries)=> {
+	entries.forEach(entry => {
+		if(entry.isIntersecting) animationAutomaticScroll()
+	})
+})
+observer.observe(objD.sobrePonerGifConsole)
+},10000) // inicio automatico de console animation
 funcionInitAnimationGames()
