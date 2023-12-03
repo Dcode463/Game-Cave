@@ -16,20 +16,21 @@ animationImgClass : document.querySelector('.animationImgClass'),
 containerTxtConsoles : document.querySelector('.containerTxtConsoles'),
 // video animation (games)
 videoInlutrationGames : document.getElementById('videoInlutrationGames'),
-imgFirstInlutration : document.getElementById('imgFirstInlutration')
+imgFirstInlutration : document.getElementById('imgFirstInlutration'),
+nextVideoGame : document.getElementById('nextVideoGame')
 }
 
-window.addEventListener('load',()=> {
-objD.sectionWelcome.style.opacity = '0';
-objD.sectionInit.style.opacity = '0';
-setTimeout(()=>{objD.sectionWelcome.style.display = 'none'; inti()},1000)
-})
+// window.addEventListener('load',()=> {
+// objD.sectionWelcome.style.opacity = '0';
+// objD.sectionInit.style.opacity = '0';
+// setTimeout(()=>{objD.sectionWelcome.style.display = 'none'; inti()},1000)
+// })
 
 
-function inti () {
-	objD.sectionInit.style.display = 'block';
-setTimeout(()=>{objD.sectionInit.style.opacity = '1';objD.navReponsiveMovil.style.opacity = '1';},500)
-}
+// function inti () {
+// 	objD.sectionInit.style.display = 'block';
+// setTimeout(()=>{objD.sectionInit.style.opacity = '1';objD.navReponsiveMovil.style.opacity = '1';},500)
+// }
 
 // scroll console
 // config
@@ -143,7 +144,7 @@ const funcionInitAnimationGames = () => {
 	const initAnimationGames = () => {
 		objD.imgFirstInlutration.style.left = '-2%';
 	videoLoad.play()
-
+	 videoLoad.muted = false;
 		videoLoad.removeEventListener('loadeddata', initAnimationGames)
 	}
 
@@ -155,9 +156,14 @@ const funcionInitAnimationGames = () => {
 		objD.imgFirstInlutration.src = objVideoAnimationGames[objectoSelecionado].imagePng;
        funcionInitAnimationGames()
 	}
+	const call = () => {
+		objD.nextVideoGame.removeEventListener('click',call)
+		initPushAnimationInlutrationGames()
+	}
 	videoLoad.addEventListener('loadeddata', initAnimationGames)
-	setTimeout(initPushAnimationInlutrationGames,10000)
+	videoLoad.addEventListener('ended', initPushAnimationInlutrationGames)
+	objD.nextVideoGame.addEventListener('click',call)
 }
 
-const initAutomaticScroll = setInterval(()=> {animationAutomaticScroll()},10000) // inicio automatico de console animation
+// const initAutomaticScroll = setInterval(()=> {animationAutomaticScroll()},10000) // inicio automatico de console animation
 funcionInitAnimationGames()
