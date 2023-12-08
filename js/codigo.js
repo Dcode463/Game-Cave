@@ -169,7 +169,7 @@ setTimeout(()=> {videoLoad.muted = false; videoLoad.play()},3000)
 }
 validorRecursividadScrollConsole = true;
 const initAutomaticScroll = setInterval(()=> {
-const observer = new IntersectionObserver((entries)=> {
+const observer = new IntersectionObserver((entries)=> { 
 	entries.forEach(entry => {
 		if(entry.isIntersecting) validorRecursividadScrollConsole = true;
 		else validorRecursividadScrollConsole = false;
