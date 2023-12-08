@@ -381,6 +381,65 @@ width: 5%;
 
 }
 .separacionOfResponsive{ display:none; }
+/*section precios inicio*/
+#sectionForPrecios{
+   color: white;
+  position: relative;
+  background-image: linear-gradient(to right top, #5a19d6, #4f2edc, #433de0, #3749e4, #2a54e7, #076af1, #007df9, #0090ff, #00adff, #00c2e5, #00cea0, #26d44c);
+   width: 100%;
+   height: 100vh;
+   padding: 20px;
+}
+.sobreponerPrecios{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 100%;
+   height: 100%;
+   transform: translate(-50%,-50%);
+   background-color: rgba(30, 30,30, 0.4);
+   padding: 10px;
+   z-index: 300;
+}
+.containerBySectionPrecios{
+   z-index: 3500;
+   width: 100%;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.circle {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   background-color: #3498db; /* Color de fondo del círculo */
+   color: #ffffff; /* Color del texto */
+   font-family: 'Arial', sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un aspecto más moderno */
+   animation: pulse 2s infinite; /* Aplicar la animación 'pulse' de manera infinita durante 2 segundos */
+ }
+
+ @keyframes pulse {
+   0% {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   }
+   50% {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+   }
+   100% {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   }
+ }
 @media only screen and (max-width : 750px){
    /*first Inlutration*/
    #nextVideoGame{

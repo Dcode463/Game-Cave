@@ -70,7 +70,7 @@ pTextInfo : `La Xbox Series S es la joya compacta que redefine la experiencia de
 }
 let validor = false;
 let matrizUtilizado = [];
-let objectMatriz = ['configVideoXboox','configVideoPs4','configVideoPs5','configVideoXbooxS']
+let objectMatriz = Object.keys(configObjVideoConsole)
 
 const whatObject = () => {
 let returnObject;
@@ -146,7 +146,7 @@ const funcionInitAnimationGames = () => {
 	const initAnimationGames = () => {
 		objD.imgFirstInlutration.style.left = '-2%';
 	videoLoad.play()
-	 videoLoad.muted = false;
+setTimeout(()=> {videoLoad.muted = false; videoLoad.play()},3000)
 		videoLoad.removeEventListener('loadeddata', initAnimationGames)
 	}
 
@@ -167,13 +167,15 @@ const funcionInitAnimationGames = () => {
 	videoLoad.addEventListener('ended', initPushAnimationInlutrationGames)
 	objD.nextVideoGame.addEventListener('click',call)
 }
-
+validorRecursividadScrollConsole = true;
 const initAutomaticScroll = setInterval(()=> {
 const observer = new IntersectionObserver((entries)=> {
 	entries.forEach(entry => {
-		if(entry.isIntersecting) animationAutomaticScroll()
+		if(entry.isIntersecting) validorRecursividadScrollConsole = true;
+		else validorRecursividadScrollConsole = false;
 	})
 })
 observer.observe(objD.sobrePonerGifConsole)
+if(validorRecursividadScrollConsole) animationAutomaticScroll()
 },10000) // inicio automatico de console animation
 funcionInitAnimationGames()
