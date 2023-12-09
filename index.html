@@ -30,29 +30,11 @@
 <nav id="navPc" class="containerModeNigth">
  <img src="media/icono.png"><p style="display:inline-block; text-align: center; font-size: 19px; color: grey;">Gamer Zone</p>
 <div id="promptsForNavPc">
-<select  class="selectsFonavs" name="Juegos" onautocomplete="">
-<option value = ""  selected style="background-color: transparent; display : none; text-align: center;">Juegos</option>
-<option>Juegos disponibles</option>
-<option>Recomendar juegos</option>
-</select>
-<select  class="selectsFonavs" name="consolas" onautocomplete="">
-<option value = ""  selected style="background-color: transparent; display : none; text-align: center;">Consolas</option>
-<option>Playstation 5</option>
-<option>Playstation 4</option>
-<option>Playstation 3</option>
-<option>Xboox one</option>
-<option>Xboox Series x</option>
-</select>
-<select   class="selectsFonavs" name="Reservar" onautocomplete="">
-<option value = ""   selected style="background-color: transparent; display : none; text-align: center;">Reservar</option>
-<option>Reservar un espacio</option>
-<option>Espacios disponibles</option>
-</select>
-<select  class="selectsFonavs" name="informacion" onautocomplete="">
-<option value = ""  selected style="background-color: transparent; display : none; text-align: center;">Gamer zone (local)</option>
-<option>Ubicacion</option>
-<option>servicios</option>
-</select>
+<a>	Novedades <i class="fa-solid fa-earth-americas"></i></a>
+<a>Juegos <i class="fa-solid fa-gamepad"></i></a>
+<a>Horarios <i class="fa-solid fa-hourglass-start"></i></a>
+<a>GamerZone <i class="fa-solid fa-map"></i></a>
+<a>Torneos <i class="fa-solid fa-trophy"></i></a>
 </div>
 </nav>
 <!--nav responsive movil -->
@@ -60,7 +42,7 @@
 	<div class="sobrePonerHomeInlutration"></div>	
 <!-- <img src="media/inlustraciones/arena-esports-borregos-monterrey.jpg" id="homeInlutrationImg"> -->
 <div class="textOFinlutration">
-<p id="innerText">Estas listo para probar las consolas de ultima generacion?</p>
+<p id="innerText">Estas listo para probar las consolas de ultima generacion? <i class="fa-brands fa-playstation"></i></p>
 <!-- <button id="buttonClick">Contactar</button> -->
 </div>
 <div class="inlutrationGames">
@@ -106,11 +88,38 @@
 	<h3 style="color:white;box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); width: auto; display: inline-block;padding: 10px;border-radius: 5px;">Precios</h3>
 <div class="sobreponerPrecios"></div>
 <div class="containerBySectionPrecios">
-	<div class="circle" id="myCircle"></div>
+<div class="containerOfPrices">
+<divs class="priceCards">
+	  <img class="imfOfPricesCards" src="media/price/priceTwo.png">
+	  <div class="containerOfTextOfPrices">
+		<p class="priceOfCardsPrices">Precio C$25</p>
+		<p class="timeOfCardsPrices" id="preciesOne">Tiempo 1 Hora</p>
+	<p class="howManyControll">Individual<i class="fa-solid fa-gamepad"></i></p>
+	</div>
+</divs>
+<divs class="priceCards">
+	<img class="imfOfPricesCards" src="media/price/priceOne.png">
+
+<div class="containerOfTextOfPrices">
+	<p class="priceOfCardsPrices">Precio C$45</p>
+	<p class="timeOfCardsPrices" id="preciesTwo">Tiempo 2	Horas</p>
+	<p class="howManyControll">Multijugador local<i class="fa-solid fa-gamepad"></i><i class="fa-solid fa-gamepad"></i></p>
+</div>
+</divs>
+<divs class="priceCards">
+	<img class="imfOfPricesCards" src="media/price/priceTree.png">
+
+<div class="containerOfTextOfPrices">
+	<p class="priceOfCardsPrices">Precio C$100</p>
+	<p class="timeOfCardsPrices" id="preciesTwo">Tiempo 3 Horas</p>
+	<p class="howManyControll">Multijugador local<i class="fa-solid fa-gamepad"></i><i class="fa-solid fa-gamepad"></i></p>
+    <p class="extraFood">Comida<i class="fa-solid fa-glass-water"></i>   <i style="display: inline-block;" class="fa-solid fa-pizza-slice"></i></p>
+</div>
+</divs>
+</div>
 </div>
 </section>
 </section>
-
 <script type="text/javascript" src="js/codigo.js"></script>
 <script src="https://kit.fontawesome.com/7a43d702a5.js" crossorigin="anonymous"></script>	
 </body>

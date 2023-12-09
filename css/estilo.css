@@ -46,11 +46,16 @@ body{
       z-index:100000;
    height:auto;
    width: 100%;
-   padding: 1px;
+   padding: 10px;
    margin: 0;
-
+   background-color: #1f1f1f;
+   color: white;
 }
-#navReponsiveMovil{display: none; opacity: 1; transition: 0.6s}
+.optionsOfNav{
+   font-size: 30px;
+   color: gray;
+}
+#navReponsiveMovil{display: none; opacity: 1; transition: 0.6s;background-color: #1f1f1f;}
 #navPc img{
    width: 40px;
 } 
@@ -67,24 +72,35 @@ body{
    height: 100vh;
 }
 #promptsForNavPc{
-
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
    display: inline-block;
+   font-size: 15px;
 }
 #promptsForNavPc a {
-   margin: 10px;
+   margin: 20px;
    text-decoration: none;
-   color: black;
-   font-size: 25px;
+   color: white;
+   font-size: 15px;
+   font-weight: 100;
 }
-.selectsFonavs{
+#promptsForNavPc a:hover{
+color: #0090ff;
+cursor: pointer;
+}
+#promptsForNavPc a:hover > #promptsForNavPc i { 
+   color: wheat;
+}
+/* .selectsFonavs{
    text-align: center;
    background-color: transparent;
    border: none;
    margin: 10px;
-}
-#homeInlutrationImg{
+   font-size: 15px;
+} */
 
-}
 #homeInlutration{
 position: absolute;
 left: 50%;
@@ -92,7 +108,7 @@ top: 50%;
 transform: translate(-50%,-50%);
 z-index: 50;
 position: relative;
-background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+/* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
 background-repeat:no-repeat ;
 height: 100%;
 /*border: solid 2px blue;*/
@@ -385,7 +401,6 @@ width: 5%;
 #sectionForPrecios{
    color: white;
   position: relative;
-  background-image: linear-gradient(to right top, #5a19d6, #4f2edc, #433de0, #3749e4, #2a54e7, #076af1, #007df9, #0090ff, #00adff, #00c2e5, #00cea0, #26d44c);
    width: 100%;
    height: 100vh;
    padding: 20px;
@@ -410,36 +425,92 @@ width: 5%;
    transform: translate(-50%,-50%);
    text-align: center;
 }
-.circle {
+/* .priceCards{
+   width: 250px;
+   border-radius: 5px;
+   background-color: #1c1c1c;
+  height: 250px;
+  border: white;
+} */
+ .containerOfPrices{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: auto;
+   height: auto;
+   transform: translate(-50%,-50%);
    display: flex;
-   align-items: center;
    justify-content: center;
+   align-items: center;
+ }
+ .priceCards{
+   transition: 0.2s;
+   width: 300px;
+   margin:20px;
+    height: 400px;
+    background-color: #1c1c1c;
+    box-shadow: 0 0 5px rgba(250,250, 250, 0.3);
+    padding:10px;
+    position: relative;
+    border-radius:10px;
+    cursor: pointer;
+ }
+ .priceCards:hover {
+   box-shadow: 0 0 20px rgba(250,250, 250, 0.7);
+    scale: 105%;
+ }
+ .imfOfPricesCards{
    width: 100px;
-   height: 100px;
-   border-radius: 50%;
-   background-color: #3498db; /* Color de fondo del círculo */
-   color: #ffffff; /* Color del texto */
-   font-family: 'Arial', sans-serif;
-   font-size: 16px;
-   font-weight: bold;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un aspecto más moderno */
-   animation: pulse 2s infinite; /* Aplicar la animación 'pulse' de manera infinita durante 2 segundos */
+   position: absolute;
+   top: -20%;
+   left: 50%;
+   transform: translate(-50%,20%);
  }
+ .containerOfTextOfPrices{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   text-align: left;
+   width:auto;
+}
+.priceOfCardsPrices{
+background-color: #4843ca;
+   padding: 10px;
+   border-radius: 5px;
+   margin-bottom: 20px;
+}
+.timeOfCardsPrices{
+   background-color: #ffffff;
+   padding: 10px;
+   color: #000;
+   border-radius: 5px;
+   margin-bottom: 20px;
 
- @keyframes pulse {
-   0% {
-    transform: scale(1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   }
-   50% {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-   }
-   100% {
-    transform: scale(1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   }
- }
+}
+.extraFood{
+   background-color: #1a5693;
+   padding: 10px;
+   color: #ffffff;
+   border-radius: 5px;
+   width: auto;
+   border: solid 3px rgb(63, 107, 78);
+
+}
+.extraFood i {
+   margin: 5px;
+}
+.howManyControll{
+   margin-bottom: 20px;
+   background-color: #1a934c;
+   padding: 10px;
+   color: #ffffff;
+   border-radius: 5px;
+   width: auto;
+}
+.howManyControll i{
+   margin: 3px;
+}
 @media only screen and (max-width : 750px){
    /*first Inlutration*/
    #nextVideoGame{
