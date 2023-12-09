@@ -146,7 +146,7 @@ const funcionInitAnimationGames = () => {
 	const initAnimationGames = () => {
 		objD.imgFirstInlutration.style.left = '-2%';
 	videoLoad.play()
-setTimeout(()=> {videoLoad.muted = false; videoLoad.play()},3000)
+// setTimeout(()=> {videoLoad.muted = false; videoLoad.play()},3000)
 		videoLoad.removeEventListener('loadeddata', initAnimationGames)
 	}
 
