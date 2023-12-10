@@ -130,6 +130,7 @@ const objVideoAnimationGames = {
 	}
 }
 	let arrayConstAnimationMatriz = [];
+	let verificadorMuted = false;
 	const arrayAnimationMatriz = Object.keys(objVideoAnimationGames);
 	let validorTwo = false;
 	const whatObjectAnimation = () => { 
@@ -146,7 +147,7 @@ const funcionInitAnimationGames = () => {
 	const initAnimationGames = () => {
 		objD.imgFirstInlutration.style.left = '-2%';
 	videoLoad.play()
-// setTimeout(()=> {videoLoad.muted = false; videoLoad.play()},3000)
+	if(verificadorMuted) setTimeout(()=> {videoLoad.muted = false; videoLoad.play()},3000)
 		videoLoad.removeEventListener('loadeddata', initAnimationGames)
 	}
 
@@ -160,6 +161,7 @@ const funcionInitAnimationGames = () => {
        funcionInitAnimationGames()
 	}
 	const call = () => {
+		verificadorMuted = true;
 		objD.nextVideoGame.removeEventListener('click',call)
 		initPushAnimationInlutrationGames()
 	}
