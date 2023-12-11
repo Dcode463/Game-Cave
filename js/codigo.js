@@ -19,7 +19,9 @@ videoInlutrationGames : document.getElementById('videoInlutrationGames'),
 imgFirstInlutration : document.getElementById('imgFirstInlutration'),
 nextVideoGame : document.getElementById('nextVideoGame'),
 // event observador
-sobrePonerGifConsole : document.querySelector('.sobrePonerGifConsole')
+sobrePonerGifConsole : document.querySelector('.sobrePonerGifConsole'),
+// others
+navPc : document.getElementById('navPc')
 }
 
 // window.addEventListener('load',()=> {
@@ -59,8 +61,7 @@ gifUrl : 'media/xbooxSeriesX/giphy.gif',
 pngUrl : 'media/xbooxSeriesX/seriesX.png',
 pTextName : 'Xbox Series X',
 pTextInfo : ` La Xbox Series X redefine la experiencia de juego con un rendimiento inigualable y una potencia asombrosa. 
-Con su arquitectura personalizada, esta consola de última generación ofrece gráficos impresionantes en resolución 4K real, 
-sumergiendo a los jugadores en mundos visualmente deslumbrantes y detallados`},
+`},
 configVideoXbooxS : {
 gifUrl : 'media/xbooxSeriesS/giphyS.gif',
 pngUrl : 'media/xbooxSeriesS/xbooxSeriesS.png',
@@ -145,7 +146,13 @@ const funcionInitAnimationGames = () => {
 	console.log('Iniciando VideoGame')
 	const videoLoad = objD.videoInlutrationGames
 	const initAnimationGames = () => {
-		objD.imgFirstInlutration.style.left = '-2%';
+	if(window.innerWidth <= 900) {
+ console.log('Modo movil')
+		objD.imgFirstInlutration.style.left = '10%';objD.imgFirstInlutration.style.top = '10%';
+	}
+
+	else objD.imgFirstInlutration.style.left = '-2%';
+
 	videoLoad.play()
 	if(verificadorMuted) setTimeout(()=> {videoLoad.muted = false; videoLoad.play()},3000)
 		videoLoad.removeEventListener('loadeddata', initAnimationGames)

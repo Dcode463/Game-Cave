@@ -511,9 +511,34 @@ background-color: #4843ca;
 .howManyControll i{
    margin: 3px;
 }
-@media only screen and (max-width : 750px){
+.innerImgModeDesktop {
+   transition: 0.6s;
+   left : '-2%'
+}
+@media only screen and (max-width : 1180px) {
+   #promptsForNavPc{
+      position: fixed;
+      width: auto;
+      left: auto;
+      transform: none;
+      margin-left: 10%;
+      top: 3%;
+   }
+}
+@media only screen and (max-width : 900px){
+   .priceCards{
+      position: relative;
+      height: 300px;
+   }
+   .containerOfPrices{
+      overflow: auto;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(11.25rem, 100%), 1fr));
+      grid-gap: 1rem;
+   }
    .inlutrationGames{
-      width: 100%;
+      width: 100px;
    }
    /*first Inlutration*/
    #nextVideoGame{
@@ -521,7 +546,7 @@ background-color: #4843ca;
    transition: 0.6s;
 position: absolute;
 right: 5%;
-bottom: -155%;
+bottom: -100%;
 padding: 20px;
 background:white;
 color: black;
@@ -573,7 +598,7 @@ width: 5%;
 }
 #imgFirstInlutration{
    transition: 0.8s;
-   width: 50%;
+   width: 40%;
    position: absolute;
    left: 50%;
    top: 50%;
@@ -598,7 +623,7 @@ width: 5%;
 /*section conosle*/
 
 #consolasSection{
-   width: 95%;
+   width: 100%;
 
    position: relative;
    height: 100vh;
@@ -622,7 +647,7 @@ border-radius: 0 0 20px 20px;
    top: 50%;
    border-radius: 5px;
    transform: translate(-50%,-50%);
-   padding: 20px;
+   padding: 30px;
 
    overflow: hidden;
    z-index: 400;
@@ -691,7 +716,7 @@ border-radius: 0 0 20px 20px;
    left: 50%;
    top: 50%;
    width: 100%;
-   height: 100%;
+   height: 101%;
    transform: translate(-50%,-50%);
    background-color: rgba(30, 30,30, 0.7);
    padding: 10px;
