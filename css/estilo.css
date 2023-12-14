@@ -78,6 +78,7 @@ body{
   transform: translate(-50%,-50%);
    display: inline-block;
    font-size: 15px;
+   z-index: 2000000;
 }
 #promptsForNavPc a {
    margin: 20px;
@@ -162,7 +163,7 @@ height: 100%;
    position: relative;
    height: 100vh;
  background-image: linear-gradient(to right top, #4d0187, #4f1e9d, #4d31b4, #4843ca, #3e55e1, #6c50df, #8d4bdb, #a944d5, #d110a9, #e2007a, #e2004b, #d41d1d);
-
+  border-radius: 10px 10px 10px 10px;
    padding:10px;
 }
 /*first Inlutration*/
@@ -517,6 +518,7 @@ background-color: #4843ca;
 }
 /*SECTION PRINCIPAL*/
 #sectionPrincipal{
+   border-radius: 120px 20px 130px 20px;
    position: relative;
    width: 100%;
    height: 100vh;
@@ -545,6 +547,8 @@ background-color: #4843ca;
    position: absolute;
    left: 50%;
    top: 30%;
+   width: 100%;
+
    transform: translate(-50%,-30%);
 }
 .fraseIncio{
@@ -553,6 +557,7 @@ background-color: #4843ca;
    display: block;
    backdrop-filter: blur(20px);
    border-radius: 5px;
+   width: 100%;
    padding: 10px;
 }
 .fraseCompleta{
@@ -566,6 +571,7 @@ background-color: #4843ca;
    left: 50%;
    top: 80%;
    transform: translate(-50%,-80%);
+   z-index: 1000;
 }
 .promptSectionPrincipal button{
    padding: 10px;
@@ -576,16 +582,23 @@ background-color: #4843ca;
    font-size: 20px;
    margin: 10px;
    cursor: pointer;
-   z-index: 150;
+   transition: 0.1s;
+}
+.promptSectionPrincipal button:hover{
+   border: solid 3px white;
 }
 @media only screen and (max-width : 1180px) {
    #promptsForNavPc{
-      position: fixed;
-      width: auto;
-      left: auto;
-      transform: none;
-      margin-left: 10%;
-      top: 3%;
+      width: 100%;
+position: absolute;
+left: 30%;
+top: 50%;
+transform: translate(10%,-50%);
+   }
+}
+@media only screen and (max-width : 1012px) {
+   #promptsForNavPc{
+left: 23%;
    }
 }
 @media only screen and (max-width : 900px){
@@ -690,7 +703,7 @@ width: 5%;
    position: relative;
    height: 100vh;
    padding:10px;
-border-radius: 0 0 20px 20px;
+border-radius: 20px 20px 20px 20px;
 
 }
 
@@ -812,4 +825,11 @@ border-radius: 20px 20px 0 0;
    backdrop-filter: blur(25px);
    font-size: 20px;
 }
+}
+@media only screen and (max-height : 738px){
+   .containerOfPrices{height: 80%;padding-bottom: 40px;}
+   .priceCards{margin-bottom: 10px;}
+   #sectionForPrecios{
+      height: 120%;
+   }
 }
